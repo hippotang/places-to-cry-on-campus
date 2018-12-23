@@ -2,7 +2,8 @@
 Uses the UCLA Grid Search service to find empty classrooms from 9am to 5pm, Monday through Friday
 
 # Running the Web Scraper
-Make sure Chromedriver is installed and is in PATH for scrape.py to run
+Download "src" and its contents into an empty folder --> in terminal navigate to that folder, and type "python scrape.py"
+Make sure Chromedriver is installed and is in PATH for scrape.py to run (Download link: http://chromedriver.chromium.org/downloads)
 
 # Data
 scrape.py writes the time intervals (in military time!) that each classroom is occupied in as a json object, which is stored in week-calendar.txt in each folder.<br/>
