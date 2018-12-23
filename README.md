@@ -8,7 +8,7 @@ Make sure Chromedriver is installed and is in PATH for scrape.py to run
 scrape.py writes the time intervals (in military time!) that each classroom is occupied in as a json object, which is stored in week-calendar.txt in each folder.
 example (week_calendar.txt)
 
-{
+{/n
 "room_name": "BOELTER_1567",
 "m": [],
 "t": [[1000, 1250],[100, 150]],
