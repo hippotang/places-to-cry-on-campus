@@ -19,7 +19,7 @@ example (week_calendar.txt)
 
 Here is the file structure for the output:
 + rooms
-  | BOELTER_####          // <building-name>_<room-number>
+  | BOELTER_####         // <building-name>_<room-number>
     | html_data.txt
     | week_calendar.txt
   
