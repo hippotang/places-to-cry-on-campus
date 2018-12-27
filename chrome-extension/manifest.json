@@ -1,0 +1,16 @@
+{
+        "name": "UCLA Grid Search Extension",
+        "version": "1.0",
+        "description": "description",
+        "permissions": ["declarativeContent", "storage"],
+        "background":
+        {
+                "scripts": ["background.js"],
+                "persistent": false
+        },
+        "page_action": {
+                "scripts": "thirdParty/jquery-2.0.3.js",
+                "default_popup": "popup.html"
+        },
+        "manifest_version": 2
+    }

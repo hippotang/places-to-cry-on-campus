@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <img src = "gene_cri.jpg" height = '50%' width = '50%'>
+        <br>
+        <br>
+        <p>What time do you want to cry?</p>
+        <input type = "time" id="time" min="9:00" max="17:00" value = "08:00:00" required></input>
+        <br>
+        <p>How long do you want to cry (in minutes)</p>
+        <input type = "number" min = 1 max = 480 id="duration" value = 1> </input>
+        <br>
+        <p>Which building do you want to cry in?</p>
+        <select name="building" id="building"> 
+            <option value="_"> any building pham </option>
+            <option value="BOELTER"> Boelter </option>
+            <option value="BUNCHE"> Bunche </option>
+        </select>
+        <br>
+        <br>
+        <button id = "submit">find empty rooms</button>
+        <br>
+        <p id = 'results'>  </p>
+    </body>
+
+    <script src = "popup.js"></script>
+</html>
