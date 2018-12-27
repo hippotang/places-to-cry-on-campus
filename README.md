@@ -1,6 +1,6 @@
 # places-to-cry-on-campus
 Uses the UCLA Grid Search service to find empty classrooms from 8am to 5pm, Monday through Friday <br>
-The code looks horrible, but it works. (Relevant xkcd: https://xkcd.com/1926/) <br>
+The code looks horrible, but it works. (Relevant xkcd: https://xkcd.com/1513/) <br>
 Please help.
 
 # Chrome-Extension
