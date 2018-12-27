@@ -1,6 +1,10 @@
 # places-to-cry-on-campus
 Uses the UCLA Grid Search service to find empty classrooms from 9am to 5pm, Monday through Friday
 
+# Chrome-Extension
+This hasn't been published yet, so for now, download the chrome-extension folder and load it with the "Load Unpacked" feature in chrome://extensions/ <br>
+The data for all classrooms is merged into a single json file titled "giant_json.json"
+
 # Running the Web Scraper
 Download "src" and its contents into an empty folder --> in terminal navigate to that folder, and type "python scrape.py"
 Make sure Chromedriver is installed and is in PATH for scrape.py to run (Download link: http://chromedriver.chromium.org/downloads)
