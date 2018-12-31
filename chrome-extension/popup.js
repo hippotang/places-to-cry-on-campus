@@ -1,3 +1,4 @@
+// once popup.html is fully loaded, call the init function
 window.onload = init();
 
 var inputTime;
@@ -19,11 +20,15 @@ function init() {
     inputDuration = document.getElementById("duration")
     buttonSubmit = document.getElementById("submit");
 
+    // the chrome extension stores giant_json.json in the local storage as room_data 
+    // once the browser gets room_data, it calls the callback function with all the data in the local storage as the "data" parameter
     chrome.storage.local.get(['room_data'],function(data) {
         room_data = data.room_data;
-        console.log(data.room_data);
+        // console.log(data.room_data);
     });
 
+    // if someone is looking for an empty room during the weekend, give results for Monday
+    // it's not optimal - I need to find a better way to address this 
     var days = ['m', 't', 'w', 'r', 'f', 'm', 'm'];
     var d = new Date();
     day = days[d.getDay()];
@@ -41,18 +46,19 @@ function init() {
         }
         results.innerHTML = tempString;
     }
-    
-    /*('room_data', function(obj) {
-        room_data = obj;
-        console.log(obj);
-    });*/
-   
 }
 
+/*
+HELPER FUNCTIONS
+*/
+
+// Takes the value of the time input element and returns the time as an integer
+// i.e. "09:00:00" becomes 900, "13:43:22" becomes 1343
 function formatTime(timeString) {
     return parseInt(timeString.substring(0,2) + timeString.substring(3,5));
 }
 
+// 955 + 6 minutes = 1001
 function addTime(time, minutes) {
     var hour1, min1;
     if ((time + minutes)%100 > 59) {
@@ -92,6 +98,7 @@ function addTime(time, minutes) {
     return available_rooms;
   }
 
+  // 
   function isFree(schedule, time, interval) {
     //console.log('schedule is ' + schedule);
     for(var i = 0; i<schedule.length; i++) {
